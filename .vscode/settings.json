@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/0x00-MySQL_Advancedd": false,
+        "0x00-MySQL_Advancedd": false
+    },
+    "explorerExclude.backup": {}
+}
