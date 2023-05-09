@@ -3,5 +3,6 @@
 
 
 def schools_by_topic(mongo_collection, topic):
-    """find topic"""
-    return [school for school in mongo_collection.find({"topic": {"$elemMatch": {"$eq": topic}}})]
+    """ Lists school having a specific topic """
+    top = {"topics": {"$elemMatch": {"$eq": topic}}}
+    return [i for i in mongo_collection.find(top)]
