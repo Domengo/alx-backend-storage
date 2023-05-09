@@ -334,4 +334,3 @@ local   0.000GB
 bye
 $
 ```
-This is a <span style="color:red">red</span> word in a sentence.
