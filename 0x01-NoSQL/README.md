@@ -315,7 +315,7 @@ exit 0
 </details>
 
 ## Use “container-on-demand” to run MongoDB
-- Ask for container Ubuntu 18.04 - MongoDB
+- Ask for container <span style="color:red">Ubuntu 18.04 - MongoDB</span>
 - Connect via SSH
 - Or via the WebTerminal
 - In the container, you should start MongoDB before playing with it:
@@ -334,3 +334,4 @@ local   0.000GB
 bye
 $
 ```
+This is a <span style="color:red">red</span> word in a sentence.
