@@ -2,5 +2,5 @@
 db.school.delete({
     "name": "Holberton school"
 }, {
-    multi: true
+    "justOne": false
 })
