@@ -314,11 +314,11 @@ exit 0
   ```
 </details>
 
-Use “container-on-demand” to run MongoDB
-Ask for container Ubuntu 18.04 - MongoDB
-Connect via SSH
-Or via the WebTerminal
-In the container, you should start MongoDB before playing with it:
+## Use “container-on-demand” to run MongoDB
+- Ask for container Ubuntu 18.04 - MongoDB
+- Connect via SSH
+- Or via the WebTerminal
+- In the container, you should start MongoDB before playing with it:
 ```
 $ service mongod start
 * Starting database mongod                                              [ OK ]
