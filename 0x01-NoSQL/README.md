@@ -69,8 +69,16 @@ $ python3
 ```
 Potential issue if documents creation doesn’t work or this error: Data directory /data/db not found., terminating (source and source)
 
-```$ sudo mkdir -p /data/db```
+```$ sudo mkdir -p /data/db
+```
 Or if /etc/init.d/mongod is missing, please find here an example of the file:
+
+<details>
+  <summary>Click to expand/hide file contents</summary>
+  
+  ```Insert file contents here.
+  ```
+</details>
 
 Click to expand/hide file contents
 Use “container-on-demand” to run MongoDB
