@@ -67,10 +67,9 @@ $ python3
 >>> pymongo.__version__
 '3.10.1'
 ```
-Potential issue if documents creation doesn’t work or this error: Data directory /data/db not found., terminating (source and source)
+Potential issue if documents creation doesn’t work or this error: Data directory /data/db not found., terminating ([source](https://bryantson.medium.com/fixing-data-db-not-found-error-in-macos-x-when-starting-mongodb-d7b82abb2479) and [source](https://stackoverflow.com/questions/37702957/mongodb-data-db-not-found))
 
-```$ sudo mkdir -p /data/db
-```
+```$ sudo mkdir -p /data/db```
 Or if /etc/init.d/mongod is missing, please find here an example of the file:
 
 <details>
@@ -313,7 +312,6 @@ exit 0
   ```
 </details>
 
-Click to expand/hide file contents
 Use “container-on-demand” to run MongoDB
 Ask for container Ubuntu 18.04 - MongoDB
 Connect via SSH
