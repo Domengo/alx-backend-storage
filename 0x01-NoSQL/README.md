@@ -29,15 +29,26 @@ All your modules should have a documentation (python3 -c 'print(__import__("my_m
 All your functions should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'
 Your code should not be executed when imported (by using if __name__ == "__main__":)
 More Info
-Install MongoDB 4.2 in Ubuntu 18.04
-Official installation guide
-
-$ wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
-$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-4.2.list
+Install MongoDB 6.0.5 in Ubuntu 22.04
+[Official installation guide](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+```
+$ sudo apt-get update
+$ sudo apt-get install gnupg
+$ curl -fsSL https://pgp.mongodb.com/server-6.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg \
+   --dearmor
+$ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 $ sudo apt-get update
 $ sudo apt-get install -y mongodb-org
+$
+$ echo "mongodb-org hold" | sudo dpkg --set-selections
+$ echo "mongodb-org-database hold" | sudo dpkg --set-selections
+$ echo "mongodb-org-server hold" | sudo dpkg --set-selections
+$ echo "mongodb-mongosh hold" | sudo dpkg --set-selections
+$ echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+$ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 ...
-$  sudo service mongod status
+$  sudo service mongod status / sudo systemctl status mongod
 mongod start/running, process 3627
 $ mongo --version
 MongoDB shell version v4.2.8
@@ -55,6 +66,7 @@ $ python3
 >>> import pymongo
 >>> pymongo.__version__
 '3.10.1'
+```
 Potential issue if documents creation doesn’t work or this error: Data directory /data/db not found., terminating (source and source)
 
 $ sudo mkdir -p /data/db
