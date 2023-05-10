@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ 101-students.py """
 
+
 def top_students(mongo_collection):
     """return top student"""
     pipeline = [
@@ -8,7 +9,7 @@ def top_students(mongo_collection):
             '$project': {
                 'name': 1,
                 'scores': 1,
-                'averageScore': { '$avg': '$scores.score' }
+                'averageScore': {'$avg': '$scores.score'}
             }
         },
         {
