@@ -27,6 +27,7 @@ def call_history(method: Callable) -> Callable:
         return result
     return wrapper
 
+
 def replay(fn: Callable) -> None:
     """replay function"""
     r = redis.Redis()
@@ -37,7 +38,9 @@ def replay(fn: Callable) -> None:
     print("{} was called {} times:".format(fn_name, count))
     for i, o in zip(inputs, outputs):
         print("{}(*{}) -> {}".format(fn_name, i.decode('utf-8'),
-                                    o.decode('utf-8')))
+                                     o.decode('utf-8')))
+
+
 class Cache:
     """class Cache that initializes redis db and flush method"""
     def __init__(self):
