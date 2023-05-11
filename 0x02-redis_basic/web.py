@@ -13,7 +13,7 @@ redis_store = redis.Redis()
 
 def wrapper(method: callable) -> callable:
     """wrapper"""
-    @wraps
+    @wraps(method)
     def wrapped(url) -> str:
         """wrapped"""
         redis_store.incr(f'count:{url}')
