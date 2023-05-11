@@ -11,7 +11,7 @@ redis_store = redis.Redis()
 '''
 
 
-def wrapper(method: callable) -> callable:
+def wrapper(method: Callable) -> Callable:
     """wrapper"""
     @wraps(method)
     def wrapped(url) -> str:
