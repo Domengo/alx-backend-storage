@@ -10,6 +10,7 @@ def wrapper(method: callable) -> callable:
         return method(url)
     return wrapped
 
+@wrapper
 def get_page(url: str) -> str:
     """get_page"""
     res = requests.get(url)
